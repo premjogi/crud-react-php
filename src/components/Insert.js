@@ -28,7 +28,7 @@ export class Insert extends Component {
             last_name: this.state.last_name,
             email: this.state.email,
         }
-        axios.get(`http://localhost/reactCrud/insert.php?first_name=${obj.first_name}&last_name=${obj.last_name}&email=${obj.email}`)
+        axios.post(`http://localhost/reactCrud/insert.php?first_name=${obj.first_name}&last_name=${obj.last_name}&email=${obj.email}`)
             .then(response => console.log(response)).catch(err => console.log(err))
         this.setState({
             first_name: '',
