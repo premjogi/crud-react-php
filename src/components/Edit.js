@@ -38,7 +38,7 @@ export class Edit extends Component {
             last_name: this.state.last_name,
             email: this.state.email,
         }
-        axios.post(`http://localhost/reactCrud/update.php?id=${this.props.match.params.id}&first_name=${obj.first_name}&last_name=${obj.last_name}&email=${obj.email}`, obj)
+        axios.put(`http://localhost/reactCrud/update.php?id=${this.props.match.params.id}&first_name=${obj.first_name}&last_name=${obj.last_name}&email=${obj.email}`, obj)
             .then(response => this.setState({ redirect: true }))
             .catch(error => console.log(error))
     }
